@@ -1,3 +1,5 @@
+import Calendars from "../components/Calendars.jsx"
+
 function Home() {
   return (
     <div className="calendars">

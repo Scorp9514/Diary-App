@@ -1,12 +1,20 @@
 .background{
-    background-color: black;
-    height:100vh;
+    
+    height: 100vh;
     width: 100vw;
     margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
 
 .calendars{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+
 

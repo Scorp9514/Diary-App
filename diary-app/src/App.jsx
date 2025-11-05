@@ -4,7 +4,7 @@ import {Routes,Route,UNSAFE_DataRouterStateContext, BrowserRouter} from 'react-r
 import {useState} from 'react';
 
 import NavBar from "./components/NavBar"
-import Calendars from "./components/calendars"
+import Calendars from "./components/Calendars.jsx"
 import Home from "./pages/Home.jsx";
 import Favorites from "./pages/Favorites.jsx";
 
@@ -16,11 +16,7 @@ function App() {
       <div className="background">
         <NavBar/>
         <main>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/Favorites" element={<Favorites/>}/>
-        </Routes>
-        
+          <Home/>
         </main>
         
       </div>

@@ -1,35 +1,42 @@
-.nav-bar{
+#nav-bar{
     background-color: rgb(73, 95, 218);
-    padding: 5rem 5rem;
+    /* padding: 5rem 5rem; */
     color: rgb(187, 187, 187);
-    font-size: clamp(16px,5vw,32px);
+    /* font-size: clamp(16px,5vw,70px); */
     display: flex;
+    padding: 1em 1em;
+    align-items: center;
 }
 
-.home-btn{
-    margin: 0 15%;
+#home-btn{
+    font-size: clamp(50px,5%,100px);
 }
 
-.home-btn:hover{
+#home-btn:hover{
     cursor: pointer;
 }
 
-.favorite-btn{
-    padding: 2em 2em;
+#favorite-btn{
+
     background-color: black;
     color: white;
     border-radius: 10%;
-    right: 20%;
-    margin: 0 15%;
+    /* right: 20%; */
+    /* margin: 0 15%; */
+    width: 10%;
     border: 1px solid rgba(255, 255, 255, 0.719);
-    
+    aspect-ratio: 3/1;
 }
 
-.favorite-btn:hover{
+#favorite-btn:hover{
     cursor: pointer;
     background-color: rgb(56, 56, 56);
 }
 
-.title{
-    font-size: clamp(50px,5%,1000px);
+#title{
+    font-size: clamp(50px,5%,100px);
+}
+
+.navbar-elements{
+    margin: 0 10%;
 }
