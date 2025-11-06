@@ -19,8 +19,8 @@ function Calendars({monthName,monthDays}){
         
         <div className="monthDays">
             {
-                daysArray.map((d,i)=>(
-                    <ul key={d}>{d}</ul>
+                daysArray.map((d)=>(
+                    <ul key={d} className="days">{d}</ul>
                 ))
             }
         </div>
