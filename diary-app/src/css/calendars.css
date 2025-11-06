@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
 .calendar{
     color: white;
     text-align: center;
@@ -9,11 +11,14 @@
     color: black;
     display: flex;
     flex-direction: column;
+    
 }
 
 .monthName{
     background-color: aqua;
-    margin: 0;
+    font-family: "Stack Sans Text", sans-serif;
+}
+
+.weekdays{
     
-    top: 0;
 }

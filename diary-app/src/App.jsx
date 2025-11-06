@@ -13,10 +13,12 @@ function App() {
 
   return (
     <>
+      <NavBar/>
       <div className="background">
-        <NavBar/>
+        
         <main>
           <Home/>
+          
         </main>
         
       </div>
