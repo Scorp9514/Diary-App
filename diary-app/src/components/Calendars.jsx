@@ -2,17 +2,9 @@ import "../css/calendars.css"
 
 
 function Calendars({monthName,monthDays}){
-    {
-        const mD = document.querySelector('.monthDays')
-        for(let i=1;i<monthDays;i++){
-            
-            console.log(monthDays)
-            let day = document.createElement('ul')
-            day.classList.add(`day-${i+1}`)
-            mD.appendChild(day)
-        }
-    }
     
+    const daysArray = Array.from({length: monthDays},(_,i)=>i+1)
+
     return <div className="calendar">
         <div className="monthName">
             <h1>{monthName}</h1>
@@ -26,7 +18,11 @@ function Calendars({monthName,monthDays}){
         </div>
         
         <div className="monthDays">
-
+            {
+                daysArray.map((d,i)=>(
+                    <ul key={d}>{d}</ul>
+                ))
+            }
         </div>
         
     </div>
