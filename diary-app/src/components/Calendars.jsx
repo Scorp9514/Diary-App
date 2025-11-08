@@ -1,30 +1,9 @@
 import "../css/calendars.css"
 import { useState, version } from "react"
 import Journal from "./Journal"
-import { createRxDatabase, getPrimaryFieldOfPrimaryKey } from 'rxdb/plugins/core';
-import { getRxStorageLocalstorage } from 'rxdb/plugins/storage-localstorage';
 
 
-async function initJournalDB(){
-    const db = await createRxDatabase({name:"journalDB",storage: getRxStorageLocalstorage()})
-    
 
-    const journalSchema = {
-        "title": "journal schema",
-        "version": 0,
-        "desciption": "db to store the diaries",
-        "primaryKey": "day",
-        "type":"object",
-        "properties":{
-            "diary":{
-                "type":"string",
-                "maxLength":150
-            }
-        }
-
-    }
-
-}
 
 function Calendars({monthName,monthDays}){
     // Array.from=>把其他東西變成陣列,
@@ -34,8 +13,10 @@ function Calendars({monthName,monthDays}){
     const daysArray = Array.from({length: monthDays},(_,i)=>i+1)
     // 宣告rxdb可以用的setDiary
     const [diary,setDiary] = useState("")
-    const diaryText = document.getElementById("diary-text")
     const [selectedDay,setSeletedDay] = useState(null)
+
+    const diaryText = document.getElementById("diary-text")
+
     return <div className="calendar">
         <div className="monthName">
             <h1>{monthName}</h1>
@@ -60,7 +41,7 @@ function Calendars({monthName,monthDays}){
         </div>
         
         {/* 判斷selectedDay有沒有值 如果有值就顯示Journal元件並傳值進去並綁定事件 */}
-        {selectedDay && <Journal day={selectedDay} onClose={()=>setSeletedDay(null)} onSave={()=>setDiary("")}/>}
+        {selectedDay && <Journal day={selectedDay} onClose={()=>setSeletedDay(null)}/>}
         
     </div>
 }
