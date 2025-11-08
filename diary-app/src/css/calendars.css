@@ -17,6 +17,8 @@
 .monthName{
     background-color: aqua;
     font-family: "Stack Sans Text", sans-serif;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
 }
 
 .weekdays{
@@ -25,7 +27,7 @@
 
 .monthDays{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7,1fr);
     text-align: center;
     justify-self: center;
     
@@ -34,4 +36,12 @@
 .days{
     border: 2px solid black;
     margin: 0;
+    aspect-ratio: 1/1;
+    display: grid;
+}
+
+.days:hover{
+    background-color: rgb(168, 168, 168);
+    color: white;
+    cursor: pointer;
 }

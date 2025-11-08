@@ -3,6 +3,7 @@ import Calendars from "../components/Calendars.jsx"
 function Home() {
   return (
     <div className="calendars">
+      {/* call the calendars components and pass in the values */}
       <Calendars monthName={"January"} monthDays={31} />
       <Calendars monthName={"Febuary"} monthDays={28} />
       <Calendars monthName={"March"} monthDays={31} />

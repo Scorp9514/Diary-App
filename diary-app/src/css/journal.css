@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+    --bg-color: rgba(221, 221, 221, 0.89);
+}
+
+#transparent-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#note-wrapper{
+    height: 50%;
+    aspect-ratio: 1/1;
+    min-height: 300px;
+    background-color: bisque;
+    border-radius: 5%;
+    position: relative;
+}
+
+#close-btn{
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: clamp(20px,10%,100px);
+}
+
+#close-btn:hover{
+    color: rgb(190, 0, 0);
+    cursor: pointer;
+}
+
+#dayName{
+    margin-top: 10px;
+    font-size: clamp(40px,20%,200px);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+}

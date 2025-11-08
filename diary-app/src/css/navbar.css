@@ -2,9 +2,7 @@
 
 #nav-bar{
     background-color: rgb(73, 95, 218);
-    /* padding: 5rem 5rem; */
     color: rgb(187, 187, 187);
-    /* font-size: clamp(16px,5vw,70px); */
     display: flex;
     padding: 1em 1em;
     align-items: center;
@@ -24,8 +22,6 @@
     background-color: black;
     color: white;
     border-radius: 10%;
-    /* right: 20%; */
-    /* margin: 0 15%; */
     width: 10%;
     min-width: 100px;
     border: 1px solid rgba(255, 255, 255, 0.719);
