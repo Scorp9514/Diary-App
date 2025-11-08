@@ -38,8 +38,18 @@
 }
 
 #dayName{
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: clamp(40px,20%,200px);
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
+}
+
+#diary-text{
+    margin: 20px;
+    width: 80%;
+    height: 65%;
+}
+
+#save-btn:hover{
+    cursor: pointer;
 }

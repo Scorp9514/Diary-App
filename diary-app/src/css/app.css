@@ -13,6 +13,8 @@ body{
 
 .calendars{
     display: grid;
+
+    /* 讓calendars自動縮放並填滿螢幕, 最小500px, 最大會填滿整個螢幕 */
     grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
 }
 
