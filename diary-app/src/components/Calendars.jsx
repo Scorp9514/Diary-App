@@ -1,7 +1,30 @@
 import "../css/calendars.css"
-import { useState } from "react"
+import { useState, version } from "react"
 import Journal from "./Journal"
+import { createRxDatabase, getPrimaryFieldOfPrimaryKey } from 'rxdb/plugins/core';
+import { getRxStorageLocalstorage } from 'rxdb/plugins/storage-localstorage';
 
+
+async function initJournalDB(){
+    const db = await createRxDatabase({name:"journalDB",storage: getRxStorageLocalstorage()})
+    
+
+    const journalSchema = {
+        "title": "journal schema",
+        "version": 0,
+        "desciption": "db to store the diaries",
+        "primaryKey": "day",
+        "type":"object",
+        "properties":{
+            "diary":{
+                "type":"string",
+                "maxLength":150
+            }
+        }
+
+    }
+
+}
 
 function Calendars({monthName,monthDays}){
     // Array.from=>把其他東西變成陣列,
@@ -9,15 +32,9 @@ function Calendars({monthName,monthDays}){
     // (_,i)前面是我們要賦予陣列的值的名稱, 後面是他的index的名稱,相當於python裡面for i,v in enumerate(li)但是iv反過來
     // 陣列的每一格依他的index填入i+1
     const daysArray = Array.from({length: monthDays},(_,i)=>i+1)
-
-    let journalDB;
-    const journalDBreq = indexedDB.open('journals',1)
-
-    journalDBreq.onupgradeneeded = (e) =>{
-        journalDB = e.target.result
-        
-    }
-
+    // 宣告rxdb可以用的setDiary
+    const [diary,setDiary] = useState("")
+    const diaryText = document.getElementById("diary-text")
     const [selectedDay,setSeletedDay] = useState(null)
     return <div className="calendar">
         <div className="monthName">
@@ -41,9 +58,9 @@ function Calendars({monthName,monthDays}){
                 ))
             }
         </div>
-
+        
         {/* 判斷selectedDay有沒有值 如果有值就顯示Journal元件並傳值進去並綁定事件 */}
-        {selectedDay && <Journal day={selectedDay} onClose={()=>setSeletedDay(null)}/>}
+        {selectedDay && <Journal day={selectedDay} onClose={()=>setSeletedDay(null)} onSave={()=>setDiary("")}/>}
         
     </div>
 }

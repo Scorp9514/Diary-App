@@ -6,7 +6,6 @@ import {useState} from 'react';
 import NavBar from "./components/NavBar"
 import Calendars from "./components/Calendars.jsx"
 import Home from "./pages/Home.jsx";
-import Favorites from "./pages/Favorites.jsx";
 
 
 function App() {
