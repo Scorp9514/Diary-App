@@ -13,3 +13,5 @@ export async function get(key){
 export async function set(val,key){
     return (await diarydb).put('diary',val,key)
 }
+
+// documentation: https://www.npmjs.com/package/idb

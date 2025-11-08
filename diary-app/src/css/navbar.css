@@ -3,8 +3,11 @@
 #nav-bar{
     background-color: rgb(73, 95, 218);
     color: rgb(187, 187, 187);
-    display: flex;
+    
     padding: 1em 1em;
+
+    /* 把"My Diary App(2026)"放到中間 */
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -18,7 +21,6 @@
 }
 
 #favorite-btn{
-
     background-color: black;
     color: white;
     border-radius: 10%;
@@ -39,11 +41,7 @@
     font-family: "Momo Trust Display", sans-serif;
 }
 
-.navbar-elements{
-
-}
-
 #weekdaysContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7,1fr);
 }

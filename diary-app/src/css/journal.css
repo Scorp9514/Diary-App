@@ -4,12 +4,20 @@
 }
 
 #transparent-bg{
+    /* 開啟diary後的透明背景 */
+
+    /* 永遠固定在畫面的左上角 */
     position: fixed;
     left: 0;
     top: 0;
+
+    /* 佔滿整個螢幕 */
     width: 100vw;
     height: 100vh;
+    
     background-color: var(--bg-color);
+
+    /* 把journal的元件放到畫面中間 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +34,8 @@
 
 #close-btn{
     display: inline-block;
+
+    /* 以note-wrapper(父元素)當作定位點 */
     position: absolute;
     right: 5%;
     top: 5%;
